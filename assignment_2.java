@@ -73,6 +73,49 @@ class Cylinder
     }
 }
 
+class Sphere
+{
+    final double pi=3.14;
+    double area , volume ;
+    double area ( int r )
+    {
+        area = 4*pi*r*r;
+        return area ;
+    }
+    double volume ( int r )
+    {
+        volume = (4/3)*pi*r*r*r;
+        return volume ;
+    }
+}
+class Cube
+{
+    int area , volume ;
+    int area ( int a )
+    {
+        area = 6*a*a;
+        return area ;
+    }
+    int volume ( int a )
+    {
+        volume = a * a * a ;
+        return volume ;
+    }
+}
+class Cuboid
+{
+    int area , volume ;
+    int area ( int l, int b , int h )
+    {
+        area = 6*(l*b+b*h+h*l);
+        return area ;
+    }
+    int volume ( int l, int b , int h )
+    {
+        volume = l * b * h ;
+        return volume ;
+    }
+}
 
 public class assignment_2
 {
@@ -89,8 +132,17 @@ public class assignment_2
          // INSTANCE FOR TRIANGLE
          Triangle obj4 = new Triangle() ;
          
-         // INSTANCE FOR Cylinder
+         // INSTANCE FOR CYLINDER
          Cylinder obj5 = new Cylinder() ;
+         
+         // INSTANCE FOR SPHERE
+         Sphere obj6 = new Sphere() ;
+         
+         // INSTANCE FOR CUBE
+         Cube obj7 = new Cube() ;
+         
+         // INSTANCE FOR CUBOID
+         Cuboid obj8 = new Cuboid() ;
 
          boolean bool = true;
 
@@ -170,11 +222,44 @@ public class assignment_2
                                 System.out.println ( "Area of the Cylinder is : " + area + "\nAnd volume is : " + volume ) ;
                                 break;
                             }
+                            case 6:
+                            {
+                                System.out.println ( "Enter the radius of the sphere : " ) ;
+                                int radius = scn.nextInt() ;                                
+                                double area = obj6.area(radius);
+                                double volume = obj6.volume(radius);
+                                System.out.println ( "Area of the sphere is : " + area + "\nAnd volume is : " + volume ) ;
+                                break;
+                            }
+                            case 7:
+                            {
+                                System.out.println ( "Enter the side of the cube : " ) ;
+                                int side = scn.nextInt() ;
+                                int area = obj7.area(side);
+                                int volume = obj7.volume(side);
+                                System.out.println ( "Area of the Cube is : " + area + "\nAnd volume is : " + volume ) ;
+                                break;
+                            }
+                            case 8:
+                            {
+                                System.out.println ( "Enter the length of the cuboid : " ) ;
+                                int length = scn.nextInt() ;
+                                System.out.println ( "Enter the breadth of the cuboid : " ) ;
+                                int breadth = scn.nextInt() ;
+                                System.out.println ( "Enter the height of the cuboid : " ) ;
+                                int height = scn.nextInt() ;
+                                int area = obj8.area(length,breadth,height);
+                                int volume = obj8.volume(length,breadth,height);
+                                System.out.println ( "Area of the Cube is : " + area + "\nAnd volume is : " + volume ) ;
+                                break;
+                            }
                         }
                     }
                     else if ( x==9 )
                     {
-                        bool = false ;break;
+                        bool = false ;
+                        System.out.println("Thanks for Using !");
+                        break;
                     }
                     else
                     {
