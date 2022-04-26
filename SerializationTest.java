@@ -9,7 +9,7 @@ class SerializationTest implements java.io.Serializable  {
     public static void main(String[] args) 
     {
         Student one = new Student("Anshul","26/09/2000","Indore","MP",452009,"India");
-        Student two = new Student("Punit","30/10/2002","Dewas","MP",452010,"India");
+        Student two = new Student("Anurag","30/10/2002","Dewas","MP",452010,"India");
         Student three = new Student("Aarav","19/09/2001","Indore","MP",452018,"India");
         Student four = new Student("Aalok","07/12/2002","Indore","MP",452018,"India");
 
